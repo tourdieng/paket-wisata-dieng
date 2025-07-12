@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -28,6 +27,14 @@
       font-size: 1.8rem;
       margin: 2rem 1rem 0.5rem;
       color: #6a1b9a;
+    }
+    .main-banner {
+      width: 100%;
+      max-width: 1000px;
+      display: block;
+      margin: 2rem auto 1.7rem auto;
+      border-radius: 2.1rem;
+      box-shadow: 0 8px 38px #6a1b9a12;
     }
     .filter-buttons {
       display: flex;
@@ -61,11 +68,6 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transition: all 0.3s;
     }
-    .card img {
-      width: 100%;
-      border-radius: 1.2rem;
-      margin-bottom: 1rem;
-    }
     .badge {
       background: #673ab7;
       color: white;
@@ -94,6 +96,21 @@
       margin-top: 1rem;
       cursor: pointer;
     }
+    .unggulan-badge {
+      background: #ffc107;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.75rem;
+      margin-left: 0.3rem;
+      display: inline-block;
+    }
+    .rating {
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 0.5rem;
+    }
     .hidden { display: none; }
     footer {
       background: #eee;
@@ -118,6 +135,9 @@
 
 <h1>Paket Wisata Dieng – Berangkat dari Berbagai Kota</h1>
 
+<!-- Banner utama -->
+<img class="main-banner" src="/paket-wisata-dieng/paket-dieng.png" alt="Paket Wisata Dieng Bersama PutraTour" loading="lazy">
+
 <div class="filter-buttons">
   <button onclick="filterCards('all')">Semua</button>
   <button onclick="filterCards('durasi-1h')">1 Hari</button>
@@ -135,242 +155,198 @@
 
 <div class="grid">
 
-<style>
-  .unggulan-badge {
-    background: #ffc107;
-    color: #000;
-    font-weight: bold;
-    font-size: 0.75rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.75rem;
-    margin-left: 0.3rem;
-    display: inline-block;
-  }
-  .rating {
-    font-size: 0.9rem;
-    color: #444;
-    margin-top: 0.5rem;
-  }
-</style>
-
     <div class="card durasi-1h kota-cilacap">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket cilacap 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Cilacap</h2>
-      <p>Paket nyaman dari kota pesisir</p>
+      <p>Pilihan pas untuk traveler dari pesisir selatan. Trip singkat, itinerary tetap padat—jelajahi spot terbaik Dieng dalam satu hari tanpa ribet.</p>
       <div class="rating">Rating: <strong>4.6 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/cilacap-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-pekalongan">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket pekalongan 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Pekalongan</h2>
-      <p>Tour menarik dari Pekalongan</p>
+      <p>Cocok untuk yang suka perjalanan santai dari kota batik. Ada waktu cukup buat nikmati kuliner lokal dan hidden gem Dieng bareng teman satu rombongan.</p>
       <div class="rating">Rating: <strong>4.9 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/pekalongan-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-wonosobo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket wonosobo 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Wonosobo</h2>
-      <p>Termurah & tercepat dari Wonosobo</p>
+      <p>Start paling praktis, tanpa perlu perjalanan jauh. Bisa eksplore spot eksklusif dan lebih fleksibel atur waktu trip bersama keluarga.</p>
       <div class="rating">Rating: <strong>4.6 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/wonosobo-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-purwokerto">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket purwokerto 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div> <span class="unggulan-badge">Terlaris</span>
       <h2>Paket dari Purwokerto</h2>
-      <p>Paket andalan dari Purwokerto</p>
+      <p>Favorit peserta dari kota Banyumas. Waktu cukup buat mengejar sunrise, wisata candi, dan santai di penginapan.</p>
       <div class="rating">Rating: <strong>4.5 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/purwokerto-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-cilacap">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket cilacap 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Cilacap</h2>
-      <p>Wisata dari Cilacap makin mudah</p>
+      <p>Untuk yang ingin pengalaman liburan lebih lama, ada waktu explore Dieng dari pagi sampai malam—rencana liburan jadi lebih fleksibel.</p>
       <div class="rating">Rating: <strong>4.8 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/cilacap-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-jogja">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket jogja 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Jogja</h2>
-      <p>Paket paling lengkap dari Jogja</p>
+      <p>Pilihan tepat untuk trip keluarga dan komunitas. Itinerary fleksibel, spot lengkap—mulai candi sampai telaga.</p>
       <div class="rating">Rating: <strong>4.8 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/jogja-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-solo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket solo 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Solo</h2>
-      <p>Pilihan terjangkau untuk Solo dan sekitarnya</p>
+      <p>Trip singkat tanpa mengganggu rutinitas. Rute efisien untuk yang ingin seharian penuh menjelajah Dieng dari Solo.</p>
       <div class="rating">Rating: <strong>4.6 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/solo-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-semarang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket semarang 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Semarang</h2>
-      <p>Liburan nyaman dari Semarang</p>
+      <p>Liburan anti-bosan, trip langsung berangkat pagi, pulang malam. Paling pas buat pelarian singkat dari rutinitas kota besar.</p>
       <div class="rating">Rating: <strong>4.7 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/semarang-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-wonosobo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket wonosobo 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div> <span class="unggulan-badge">Murah!</span>
       <h2>Paket dari Wonosobo</h2>
-      <p>Start langsung dari pusat kota Wonosobo</p>
+      <p>Paket paling hemat, cukup datang ke meeting point. Langsung berangkat ke spot wisata terbaik Dieng tanpa perjalanan jauh.</p>
       <div class="rating">Rating: <strong>4.3 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/wonosobo-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-purwokerto">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket purwokerto 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Purwokerto</h2>
-      <p>Paket andalan dari Purwokerto</p>
+      <p>Pilihan simpel buat yang mau one-day escape. Waktu efisien, tetap bisa menikmati sunrise dan destinasi utama.</p>
       <div class="rating">Rating: <strong>4.7 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/purwokerto-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-cilacap">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket cilacap 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Cilacap</h2>
-      <p>Paket nyaman dari kota pesisir</p>
+      <p>Pilihan favorit buat rombongan keluarga. Bisa merasakan suasana malam di Dieng, waktu liburan lebih maksimal.</p>
       <div class="rating">Rating: <strong>4.2 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/cilacap-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-magelang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket magelang 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Magelang</h2>
-      <p>Rute menarik dari Magelang</p>
+      <p>Rekomendasi untuk pencinta sunrise dan jelajah alam. Cocok untuk keluarga, itinerary bisa di-custom sesuai request peserta.</p>
       <div class="rating">Rating: <strong>4.4 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/magelang-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-semarang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket semarang 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Semarang</h2>
-      <p>Liburan nyaman dari Semarang</p>
+      <p>Kesempatan buat lebih lama jelajah Dieng bareng sahabat. Sering jadi pilihan untuk weekend trip dan foto-foto bareng.</p>
       <div class="rating">Rating: <strong>4.4 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/semarang-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-solo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket solo 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Solo</h2>
-      <p>Nikmati kemudahan trip dari Solo</p>
+      <p>Waktu lebih fleksibel untuk keluarga atau grup. Nikmati sunrise Sikunir, candi, hingga kuliner lokal dalam satu perjalanan.</p>
       <div class="rating">Rating: <strong>4.3 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/solo-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-semarang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket semarang 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Semarang</h2>
-      <p>Liburan nyaman dari Semarang</p>
+      <p>Liburan long weekend, itinerary lebih longgar. Ada waktu buat hunting foto, relaksasi, dan eksplorasi spot hidden gem Dieng.</p>
       <div class="rating">Rating: <strong>4.7 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/semarang-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-solo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket solo 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Solo</h2>
-      <p>Nikmati kemudahan trip dari Solo</p>
+      <p>Untuk yang ingin menjelajah lebih lama. Bisa pilih itinerary khusus keluarga atau rombongan kecil yang butuh quality time.</p>
       <div class="rating">Rating: <strong>4.9 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/solo-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-wonosobo">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket wonosobo 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Wonosobo</h2>
-      <p>Start langsung dari pusat kota Wonosobo</p>
+      <p>Start langsung dari kota terdekat Dieng. Cocok buat yang ingin fleksibel atur jam dan bisa custom destinasi dengan mudah.</p>
       <div class="rating">Rating: <strong>4.3 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/wonosobo-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-jogja">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket jogja 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div> <span class="unggulan-badge">Populer</span>
       <h2>Paket dari Jogja</h2>
-      <p>Rekomendasi rute premium Jogja</p>
+      <p>Paket private trip yang nyaman dari Jogja. Cocok untuk liburan keluarga atau momen spesial bareng pasangan ke Dieng.</p>
       <div class="rating">Rating: <strong>5.0 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/jogja-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-magelang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket magelang 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Magelang</h2>
-      <p>Rute menarik dari Magelang</p>
+      <p>Trip slow travel, ada ruang buat istirahat dan eksplorasi. Bisa ikut workshop kerajinan lokal atau kulineran santai di desa sekitar.</p>
       <div class="rating">Rating: <strong>4.4 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/magelang-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-jogja">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket jogja 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Jogja</h2>
-      <p>Rekomendasi rute premium Jogja</p>
+      <p>Pilihan cepat untuk liburan sehari. Trip nyaman, berangkat pagi, bisa pulang malam dengan cerita baru.</p>
       <div class="rating">Rating: <strong>5.0 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/jogja-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-3h2m kota-purwokerto">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket purwokerto 3H2M">
       <div class="badge" style="background:#f44336">3H2M</div>
       <h2>Paket dari Purwokerto</h2>
-      <p>Paket andalan dari Purwokerto</p>
+      <p>Rekomendasi untuk healing dan recharge, itinerary santai, banyak waktu untuk menikmati keindahan alam Dieng.</p>
       <div class="rating">Rating: <strong>5.0 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/purwokerto-3h2m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-magelang">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket magelang 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Magelang</h2>
-      <p>Trip asyik dari kota sejuta kenangan</p>
+      <p>Trip sehari langsung dari kota sejarah. Cocok buat traveler yang suka perjalanan praktis dan ingin suasana baru.</p>
       <div class="rating">Rating: <strong>4.8 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/magelang-1h.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-2h1m kota-pekalongan">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket pekalongan 2H1M">
       <div class="badge" style="background:#ff9800">2H1M</div>
       <h2>Paket dari Pekalongan</h2>
-      <p>Tour menarik dari Pekalongan</p>
+      <p>Pilihan pas buat keluarga dan teman seangkatan, itinerary bisa fleksibel sesuai request. Trip lebih seru dengan suasana khas Pekalongan.</p>
       <div class="rating">Rating: <strong>4.7 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/pekalongan-2h1m.html'">Detail Paket</button>
     </div>
-    
+
     <div class="card durasi-1h kota-pekalongan">
-      <img src="https://www.putratourdieng.com/wp-content/uploads/2025/07/paket_wisata_dieng.png" alt="Paket pekalongan 1 Hari">
       <div class="badge" style="background:#4caf50">1 Hari</div>
       <h2>Paket dari Pekalongan</h2>
-      <p>Paket unggulan dari kota batik</p>
+      <p>Cocok untuk yang mau liburan singkat tanpa ribet, mulai pagi langsung eksplore spot utama, sore bisa kembali ke kota batik.</p>
       <div class="rating">Rating: <strong>4.6 ★</strong></div>
       <button onclick="window.location.href='/paket-wisata-dieng/pekalongan-1h.html'">Detail Paket</button>
     </div>
-    
 </div>
-
 
 <footer style="background:#eee;text-align:center;padding:2rem 1rem;color:#666;font-size:0.9rem;">
   © 2025 PutraTour.id – Eksplorasi Terbaik ke Dataran Tinggi Dieng.
@@ -382,7 +358,6 @@
     <a href="/paket-wisata-dieng/kontak.html" style="color:#6a1b9a;text-decoration:none;">Kontak</a>
   </div>
 </footer>
-
 
 <script>
 function filterCards(cls) {

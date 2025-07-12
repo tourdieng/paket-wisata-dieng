@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontak</title>
   <link rel="canonical" href="https://www.putratour.id/paket-wisata-dieng/kontak.html">
+  <meta name="robots" content="noimageindex,nosnippet">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -53,8 +54,6 @@
       text-decoration: underline;
     }
     ul { margin-bottom: 0 }
-  </style>
-  <style>
     .card-box {
       background: white;
       border-radius: 1.2rem;
@@ -73,6 +72,65 @@
     .card-box p {
       margin: 0.6rem 0;
     }
+    .form-order {
+      max-width: 410px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      padding: 1rem 1.2rem 1.5rem 1.2rem;
+      background: #f7f5fd;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 10px rgba(106,27,154,0.06);
+    }
+    .form-order label {
+      font-weight: 500;
+      color: #19335a;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .form-order input,
+    .form-order select {
+      width: 100%;
+      padding: 0.52rem 0.8rem;
+      border: 1px solid #c7c3d1;
+      border-radius: 0.8rem;
+      font-size: 1rem;
+      background: #fff;
+      margin-top: 0.18rem;
+      outline: none;
+      box-sizing: border-box;
+      transition: border .2s;
+    }
+    .form-order input:focus,
+    .form-order select:focus {
+      border: 1.5px solid #6a1b9a;
+      background: #f4f2fc;
+    }
+    .form-order button[type="submit"] {
+      margin-top: 0.2rem;
+      background: linear-gradient(90deg, #6a1b9a, #1976d2 96%);
+      color: #fff;
+      padding: 0.72rem 0;
+      border: none;
+      border-radius: 0.9rem;
+      font-size: 1.08rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 7px rgba(26,51,90,0.09);
+      transition: background .2s;
+    }
+    .form-order button[type="submit"]:hover {
+      background: linear-gradient(90deg, #1976d2, #6a1b9a 80%);
+    }
+    @media (max-width:600px){
+      .form-order{
+        max-width:100%;
+        padding:1rem 0.4rem 1.2rem 0.4rem;
+        border-radius:0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -85,36 +143,36 @@
 <div class="content">
 <h1>Kontak & Pemesanan</h1>
 
-        <div class="card-box">
-          <h2>📬 Formulir Pemesanan</h2>
-          <form onsubmit="return sendWA()" method="POST">
-            <p><label>Pilih Paket Wisata:<br><select id="paket">
-              <option value="1 Hari">1 Hari</option>
-              <option value="2 Hari 1 Malam">2 Hari 1 Malam</option>
-              <option value="3 Hari 2 Malam">3 Hari 2 Malam</option>
-            </select></label></p>
-            <p><label>Kota Penjemputan:<br><input type="text" id="mepo" required></label></p>
-            <p><label>Jumlah Peserta:<br><input type="number" id="peserta" required min="1"></label></p>
-            <p><label>Tanggal Keberangkatan:<br><input type="date" id="tanggal" required min="2025-07-12"></label></p>
-            <button type="submit">Kirim via WhatsApp</button>
-          </form>
-        </div>
-        <script>
-        function sendWA() {{
-          const paket = document.getElementById('paket').value;
-          const mepo = document.getElementById('mepo').value;
-          const peserta = document.getElementById('peserta').value;
-          const tanggal = document.getElementById('tanggal').value;
-          const pesan = `Halo admin, saya ingin pesan paket ${paket} dari ${mepo}, untuk ${peserta} orang pada ${tanggal}`;
-          const wa = 'https://wa.me/628112828283?text=' + encodeURIComponent(pesan);
-          window.open(wa);
-          return false;
-        }}
-        </script>
-        <noscript>Silakan hubungi <span style="user-select:none;">0811-••••-8283</span></noscript>
-        
+  <div class="card-box">
+    <h2>📬 Formulir Pemesanan</h2>
+    <form class="form-order" onsubmit="return sendWA()" method="POST" autocomplete="off">
+      <label>Pilih Paket Wisata:
+        <select id="paket">
+          <option value="1 Hari">1 Hari</option>
+          <option value="2 Hari 1 Malam">2 Hari 1 Malam</option>
+          <option value="3 Hari 2 Malam">3 Hari 2 Malam</option>
+        </select>
+      </label>
+      <label>Kota Penjemputan:
+        <input type="text" id="mepo" required>
+      </label>
+      <label>Jumlah Peserta:
+        <input type="number" id="peserta" required min="1">
+      </label>
+      <label>Tanggal Keberangkatan:
+        <input type="date" id="tanggal" required min="2025-07-12">
+      </label>
+      <button type="submit">Kirim via WhatsApp</button>
+    </form>
+  </div>
+  <!--noindex-->
+  <noscript>
+    Untuk pemesanan, hubungi admin via WhatsApp: 
+    <span style="user-select:none;">0811-••••-8283</span>
+  </noscript>
+  <!--/noindex-->
+  
 </div>
-
 
 <footer style="background:#eee;text-align:center;padding:2rem 1rem;color:#666;font-size:0.9rem;">
   © 2025 PutraTour.id – Eksplorasi Terbaik ke Dataran Tinggi Dieng.
@@ -127,6 +185,24 @@
   </div>
 </footer>
 
+<script>
+  // Nomor WA 
+  function sendWA() {
+    const paket = document.getElementById('paket').value;
+    const mepo = document.getElementById('mepo').value;
+    const peserta = document.getElementById('peserta').value;
+    const tanggal = document.getElementById('tanggal').value;
+    // Nomor dipecah
+    var n1 = "6281";
+    var n2 = "1282";
+    var n3 = "8283";
+    var nomor = n1 + n2 + n3; // 
+    const pesan = `Halo admin, saya ingin pesan paket ${paket} dari ${mepo}, untuk ${peserta} orang pada ${tanggal}`;
+    const wa = 'https://wa.me/' + nomor + '?text=' + encodeURIComponent(pesan);
+    window.open(wa);
+    return false;
+  }
+</script>
 
 </body>
 </html>

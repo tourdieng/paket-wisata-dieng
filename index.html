@@ -153,7 +153,8 @@
   <button onclick="filterCards('kota-pekalongan')">Pekalongan</button>
 </div>
 
-<div class="grid">
+<!-- Tambahkan id="paket-list" di grid -->
+<div id="paket-list" class="grid">
 
     <div class="card durasi-1h kota-cilacap">
       <div class="badge" style="background:#4caf50">1 Hari</div>
@@ -359,6 +360,7 @@
   </div>
 </footer>
 
+<!-- JS scroll otomatis ke grid -->
 <script>
 function filterCards(cls) {
   const cards = document.querySelectorAll('.card');
@@ -373,6 +375,8 @@ function filterCards(cls) {
       }
     }
   });
+  // Scroll ke bagian daftar paket
+  document.getElementById('paket-list').scrollIntoView({behavior: 'smooth'});
 }
 </script>
 
